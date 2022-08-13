@@ -1,1 +1,8 @@
 <h1>Create New Post</h1>
+<form method='post'>
+{% csrf_token %}
+{{forms}}
+
+<input type='submit' value='New'></input>
+</form>
+

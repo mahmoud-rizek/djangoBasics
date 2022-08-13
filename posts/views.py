@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import postModel
+from .forms import postForm
 
 # Create your views here.
 
@@ -12,7 +13,13 @@ def singlePostView(request, id):
     return render(request, 'singlePost.html', {'sinPosTemp' : posts})
 
 def newPostView(request):
-    pass
+    if request.method == 'post':
+        form = postForm(request.post)
+        if form.is_valid():
+            form.save()
+    else:
+        form = postForm()
+    return render(request, 'newPost.html', {'forms' : form})
 
 def editPostView(request, id):
     pass

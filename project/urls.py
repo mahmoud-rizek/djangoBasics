@@ -22,6 +22,7 @@ urlpatterns = [
     path('blog/', allPostView, name='allPost'),
     path('blog/<int:id>', singlePostView, name='singlePost'),
     path('blog/new', newPostView, name='newPost'),
+    
     path('blog/<int:id>/edit', editPostView, name='editPost'),
     # path('blog/<int:id/delet>', deletPostView, name='deletPost')
 ]
