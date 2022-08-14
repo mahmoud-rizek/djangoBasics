@@ -24,5 +24,5 @@ urlpatterns = [
     path('blog/new', newPostView, name='newPost'),
     
     path('blog/<int:id>/edit', editPostView, name='urlEditPost'),
-    path('blog/<int:id>/delet', deletPostView, name='urlDeletPost')
+    path('blog/<int:id>/delete', deletPostView, name='urlDeletPost')
 ]
