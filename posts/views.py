@@ -32,7 +32,7 @@ def editPostView(request, id): # -----> Update
         form = postForm(instance=posts)
     return render(request, 'editPost.html', {'forms' : form})
 
-def deletPostView(request, id): # -----> Delete
+def deletPostView(id): # -----> Delete
     posts = postModel.objects.get(id=id)    
     posts.delete()
     return redirect('/blog/')

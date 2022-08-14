@@ -1,8 +1,11 @@
 <h2>{{sinPosTemp}}</h2>
-<p>{{sinPosTemp.content}}</p>
+<p>{{sinPosTemp.title}}</p>
 
 
 <hr>
 
-<a href="{% url 'urlEditPost' sinPosTemp.id %}">Edit Post</a>
-<a href="{% url 'urlDeletPost' sinPosTemp.id %}">Delet Post</a>
+<a href="{% url 'urlEditPost' sinPosTemp.id %}"><input type='submit' value='Edit Post'></a>
+<a href="{% url 'urlDeletPost' sinPosTemp.id %}"><input type='submit' value='Delete Post'></a>
+
+<br>
+<a href="{% url 'urlAllPost'  %}"><input type='submit' value='Main Padge'></a>

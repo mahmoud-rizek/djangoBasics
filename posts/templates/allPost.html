@@ -1,7 +1,10 @@
-<h1>Main Blog</h1>
+<h1>Main Padge</h1>
 
 {% for post in allPosTemp %}
 
 <h3><a href="{% url 'urlSinglePost' post.id %}">{{post}}</a></h3>
 
 {% endfor %}
+
+
+<a href="{% url 'newPost'  %}"><input type='submit' value='Add New Post'></a>

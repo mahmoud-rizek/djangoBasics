@@ -4,8 +4,9 @@ from django.db import models
 
 
 class postModel(models.Model):
+    name = models.CharField(max_length=50)
     title = models.CharField(max_length=50)
-    content = models.TextField(max_length=50)
+    content = models.TextField(max_length=5000)
     
     def __str__(self) -> str:
-        return self.title
+        return self.name
