@@ -19,10 +19,10 @@ from posts.views import allPostView, singlePostView, newPostView, editPostView, 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('blog/', allPostView, name='allPost'),
-    path('blog/<int:id>', singlePostView, name='singlePost'),
+    path('blog/', allPostView, name='urlAllPost'),
+    path('blog/<int:id>', singlePostView, name='urlSinglePost'),
     path('blog/new', newPostView, name='newPost'),
     
-    path('blog/<int:id>/edit', editPostView, name='editPost'),
-    # path('blog/<int:id/delet>', deletPostView, name='deletPost')
+    path('blog/<int:id>/edit', editPostView, name='urlEditPost'),
+    path('blog/<int:id>/delet', deletPostView, name='urlDeletPost')
 ]
